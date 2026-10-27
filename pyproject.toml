@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adopt"
+version = "1.0.0"
+description = "AppImage manager and zero-trace lifecycle tool for Linux."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "adopt" }]
+
+[project.scripts]
+adopt = "adopt.main:main"
+
+[tool.setuptools]
+package-dir = {"adopt" = "."}
+packages = ["adopt"]
+
+[tool.setuptools.package-data]
+adopt = ["completions/*"]
